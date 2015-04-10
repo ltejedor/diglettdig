@@ -34,8 +34,8 @@ chrome.extension.onConnect.addListener(function (port) {
 // send a message to the content script
 var colorDivs = function() {
 	chrome.tabs.getSelected(null, function(tab){
-	    chrome.tabs.sendMessage(tab.id, {type: "colors-div", color: "#F00"});
+	    chrome.tabs.sendMessage(tab.id, {type: "colors-div", img: "url('http://i.imgur.com/VpsNbi4.gif')"});
 	    // setting a badge
-		chrome.browserAction.setBadgeText({text: "red!"});
+		chrome.browserAction.setBadgeText({text: "diglettized!"});
 	});
 }
