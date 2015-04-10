@@ -2,7 +2,7 @@
   "name": "DiglettExtension",
   "version": "0.0.3",
   "manifest_version": 2,
-  "description" : "V Important Production Capitalism",
+  "description" : "Have a diglett army help you get through all your work today! (now with adventure time for more general enthusiasm)",
   "icons": { "16": "icons/16x16.png", "48": "icons/48x48.png", "128": "icons/128x128.png" },
 
   "omnibox": { "keyword" : "indeed human" },
