@@ -1,6 +1,6 @@
 {
   "name": "DiglettExtension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description" : "V Important Production Capitalism",
   "icons": { "16": "icons/16x16.png", "48": "icons/48x48.png", "128": "icons/128x128.png" },
@@ -15,6 +15,12 @@
     "default_title": "That's the tool tip",
     "default_popup": "browseraction/popup.html"
   },
+
+  "web_accessible_resources": [
+    "img/VpsNbi4.gif",
+    "mp3/diglettdig.mp3"
+  ],
+
 
   "background": {
     "scripts": ["background.js"],

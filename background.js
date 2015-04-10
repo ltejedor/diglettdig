@@ -1,7 +1,7 @@
 // omnibox
 chrome.omnibox.onInputChanged.addListener(function(text, suggest) {
 	suggest([
-	  {content: "color-divs", description: "Make everything red"}
+	  {content: "color-divs", description: "Diglittize all!"}
 	]);
 });
 chrome.omnibox.onInputEntered.addListener(function(text) {
@@ -34,8 +34,29 @@ chrome.extension.onConnect.addListener(function (port) {
 // send a message to the content script
 var colorDivs = function() {
 	chrome.tabs.getSelected(null, function(tab){
-	    chrome.tabs.sendMessage(tab.id, {type: "colors-div", img: "url('http://i.imgur.com/VpsNbi4.gif')"});
+			var bgImg = chrome.extension.getURL('img/VpsNbi4.gif');
+	    chrome.tabs.sendMessage(tab.id, {type: "colors-div", img: "url(" + bgImg + ")"});
 	    // setting a badge
 		chrome.browserAction.setBadgeText({text: "diglettized!"});
 	});
 }
+
+
+//audio stuff
+
+var audioElement = document.createElement('audio');
+ audioElement.setAttribute("preload", "auto");
+ audioElement.autobuffer = true;
+
+ var source1 = document.createElement('source');
+ source1.type= 'audio/mp3';
+ source1.src= 'mp3/diglettdig.mp3';
+ audioElement.appendChild(source1);
+
+ chrome.extension.onMessage.addListener(
+    function(request, sender, sendResponse) {
+      if (request.action == "play"){
+          audioElement.load;
+          audioElement.play();
+      }
+});

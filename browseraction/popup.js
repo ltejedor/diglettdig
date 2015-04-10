@@ -3,5 +3,6 @@ window.onload = function() {
 		chrome.extension.sendMessage({
 	        type: "color-divs"
 	    });
+		chrome.extension.sendMessage({action: "play"})
 	}
 }
