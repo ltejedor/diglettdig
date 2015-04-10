@@ -1,6 +1,6 @@
 {
   "name": "DiglettExtension",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description" : "V Important Production Capitalism",
   "icons": { "16": "icons/16x16.png", "48": "icons/48x48.png", "128": "icons/128x128.png" },
@@ -28,7 +28,10 @@
   },
 
   "chrome_url_overrides" : {
-    "newtab": "newtab/newtab.html"
+    "newtab": [
+      "newtab/newtab.html",
+      "newtab/newtab.js"
+    ]
   },
 
   "content_scripts": [
