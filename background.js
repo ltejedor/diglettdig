@@ -43,7 +43,6 @@ var colorDivs = function() {
 
 
 //audio stuff
-
 var audioElement = document.createElement('audio');
  audioElement.setAttribute("preload", "auto");
  audioElement.autobuffer = true;

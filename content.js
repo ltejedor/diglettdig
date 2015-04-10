@@ -1,9 +1,6 @@
 chrome.extension.onMessage.addListener(function(message, sender, sendResponse) {
 	switch(message.type) {
 		case "colors-div":
-			//plays audio in background
-
-
 			//sets all div backgrounds to digletts
 			var divs = document.querySelectorAll("div");
 			if(divs.length === 0) {
